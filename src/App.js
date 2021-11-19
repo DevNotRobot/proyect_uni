@@ -1,10 +1,11 @@
 import "./App.css";
+import { AppRouter } from "./config/AppRouter";
 
 function App() {
   return (
-    <div>
-      <h1>asd</h1>
-    </div>
+    <>
+      <AppRouter />
+    </>
   );
 }
 
