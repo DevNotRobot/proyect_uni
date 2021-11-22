@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { startLogout } from "../../../actions/auth";
 
 export default function Index() {
   const [showMenu, setShowMenu] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(startLogout());
+  };
 
   return (
     <div className="dark:bg-gray-900">
@@ -107,7 +114,7 @@ export default function Index() {
               <ul className="hidden w-8/12 md:flex items-center justify-center space-x-8">
                 <li>
                   <Link
-                    to="/"
+                    to="/admin"
                     className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                   >
                     Home
@@ -115,26 +122,10 @@ export default function Index() {
                 </li>
                 <li>
                   <Link
-                    to="/reserve"
+                    to="/admin/users"
                     className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                   >
-                    Reservar cita
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/aboutus"
-                    className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
-                  >
-                    Acerca de Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="contactus"
-                    className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
-                  >
-                    Contactanos
+                    Usuarios
                   </Link>
                 </li>
               </ul>
@@ -178,12 +169,12 @@ export default function Index() {
                   </button>
                 </div>
                 <div className="hidden sm:flex flex-row space-x-4">
-                  <a
-                    href="/login"
-                    className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-white bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-600 hover:bg-indigo-600 duration-150 justify-center items-center"
+                  <button
+                    onClick={handleLogout}
+                    className="px-10 rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-white bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-600 hover:bg-indigo-600 justify-center items-center"
                   >
-                    Ingresar
-                  </a>
+                    Logout
+                  </button>
                 </div>
               </div>
             </div>
@@ -257,23 +248,7 @@ export default function Index() {
                     href="#!"
                     className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
                   >
-                    Reservar cita
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#!"
-                    className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
-                  >
-                    Acerca Nosotros
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#!"
-                    className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
-                  >
-                    Contactanos
+                    Usuarios
                   </a>
                 </li>
               </ul>
@@ -281,12 +256,12 @@ export default function Index() {
             <div className="h-full flex items-end">
               <ul className="flex flex-col space-y-8 bg-gray-50 w-full py-10 p-4 dark:bg-gray-800">
                 <li>
-                  <a
-                    href="/login"
+                  <button
+                    onClick={handleLogout}
                     className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-white bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-600 hover:bg-indigo-600 justify-center items-center"
                   >
-                    Ingresar
-                  </a>
+                    Logout
+                  </button>
                 </li>
               </ul>
             </div>

@@ -1,10 +1,21 @@
-import React from "react";
+import { useEffect } from "react";
+import Home from "../../components/Admin/Home";
+import { useDispatch, useSelector } from "react-redux";
+
+import { eventStartLoading } from "../../actions/events";
 
 function Index() {
+  const dispatch = useDispatch();
+  const { events } = useSelector((state) => state.calendar);
+
+  useEffect(() => {
+    dispatch(eventStartLoading());
+  }, [dispatch]);
+
   return (
-    <div>
-      <h1>INdex</h1>
-    </div>
+    <>
+      <Home events={events} />
+    </>
   );
 }
 

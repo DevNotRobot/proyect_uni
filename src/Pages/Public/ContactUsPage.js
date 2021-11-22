@@ -1,10 +1,14 @@
-import React from "react";
+import ContactUs from "../../components/Public/ContactUs";
+import Navbar from "../../components/Public/Navbar";
+import Footer from "../../components/Public/Footer";
 
 function ContactUsPage() {
   return (
-    <div>
-      <h1>ContactUsPage</h1>
-    </div>
+    <>
+      <Navbar />
+      <ContactUs />
+      <Footer />
+    </>
   );
 }
 
