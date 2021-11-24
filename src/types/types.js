@@ -18,4 +18,10 @@ export const types = {
   authStartRegister: "[auth] Start Register",
   authStartStartTokenRenew: "[auth] Start token renew",
   authLogout: "[auth] Logout",
+
+  userStartAddNew: "[user] Start add new",
+  userAddNew: "[user] Add new",
+  userUpdated: "[user] User updated",
+  userDeleted: "[user] User deleted",
+  userLoaded: "[user] User Loaded",
 };

@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Admin from "../Pages/Admin";
-// import Orders from "Pages/Admin/Orders";
-// import Profile from "Pages/Admin/Profile";
+import UsersPage from "../Pages/Admin/UsersPage";
+import ErrorPage from "../Pages/Public/Error404";
 
 export const AdminRoutes = () => {
   return (
@@ -11,8 +11,8 @@ export const AdminRoutes = () => {
         {/* home */}
         <Route exact path="/admin" component={Admin} />
         {/* admin data */}
-        {/* <Route exact path="/admin/ordes" component={Orders} /> */}
-        {/* <Route exact path="/admin/profile" component={Profile} /> */}
+        <Route exact path="/admin/users" component={UsersPage} />
+        <Route exact path="/admin/error" component={ErrorPage} />
 
         <Redirect to="/admin/error" />
       </Switch>
