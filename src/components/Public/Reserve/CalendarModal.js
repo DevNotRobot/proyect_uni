@@ -206,8 +206,8 @@ export const CalendarModal = () => {
             <label className="leading-7 text-sm text-gray-600">DNI</label>
             <input
               type="number"
-              className="p-2 w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 leading-8"
-              placeholder="DNI"
+              className="px-2 w-full bg-gray-100 bg-opacity-60 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 leading-8"
+              placeholder="Escribe tu DNI"
               name="dni"
               autoComplete="off"
               value={dni}
@@ -217,9 +217,24 @@ export const CalendarModal = () => {
               onClick={(e) => {
                 validar(e);
               }}
-              className="mt-2 w-full flex text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              className="mt-3 rounded-md flex w-full py-2 font-normal text-lg leading-3 text-white bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2  duration-150  items-center"
             >
-              Validar DNI
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                class="feather feather-check-circle mx-4"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <h1>Validar DNI</h1>
             </button>
             {validDni ? (
               <>
@@ -248,13 +263,13 @@ export const CalendarModal = () => {
           <div className="p-2 w-full">
             <button
               type="submit"
-              className="w-full flex text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              className="w-full flex text-white bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg"
             >
-              <div className="mx-auto">
+              <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="32"
+                  height="32"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="#fff"
@@ -267,7 +282,9 @@ export const CalendarModal = () => {
                   <polyline points="17 21 17 13 7 13 7 21"></polyline>
                   <polyline points="7 3 7 8 15 8"></polyline>
                 </svg>
-                <span className="float-left ml-2"> Guardar</span>
+                <span className="float-left ml-2 mt-1">
+                  Haz click para guardar
+                </span>
               </div>
             </button>
           </div>

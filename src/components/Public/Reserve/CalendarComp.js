@@ -8,7 +8,6 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "moment/locale/es";
 
 import { useDispatch, useSelector } from "react-redux";
-//import { uiOpenModal } from "../../../actions/ui";
 import {
   eventSetActive,
   eventClearActiveEvent,
@@ -35,11 +34,6 @@ function CalendarComp() {
     dispatch(eventStartLoading());
   }, [dispatch]);
 
-  /*const onDoubleClick = (e) => {
-    // console.log(e);
-    dispatch(uiOpenModal());
-  };*/
-
   const onSelectEvent = (e) => {
     dispatch(eventSetActive(e));
   };
@@ -50,7 +44,6 @@ function CalendarComp() {
   };
 
   const onSelectSlot = (e) => {
-    // console.log(e)
     dispatch(eventClearActiveEvent());
   };
 
@@ -77,7 +70,6 @@ function CalendarComp() {
         endAccessor="end"
         messages={messages}
         eventPropGetter={eventStyleGetter}
-        //onDoubleClickEvent={onDoubleClick}
         onSelectEvent={onSelectEvent}
         onView={onViewChange}
         onSelectSlot={onSelectSlot}

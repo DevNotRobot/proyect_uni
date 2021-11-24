@@ -4,17 +4,17 @@ function Steps() {
   return (
     <>
       <section className="text-gray-600 body-font py-6 mx-auto container border-t-2 border-purple-400">
-        <div className="flex flex-col items-center justify-center ">
-          <h1 className="lg:text-5xl text-3xl font-bold text-center text-gray-800">
+        <div className="flex flex-col">
+          <h1 className="lg:text-5xl text-3xl font-bold  text-gray-800">
             Como reservar una cita
           </h1>
-          <p className="text-base leading-6 mt-4 text-center text-gray-600 2xl:w-2/5 sm:w-96">
+          <p className="text-base leading-6 mt-4 text-gray-600 2xl:w-2/5 sm:w-96">
             Sigue al pie de la letra los siguientes pasos
           </p>
         </div>
-        <div className="container px-5 py-6 mx-auto flex flex-wrap ">
-          <div className="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
-            <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
+        <div className="container py-6">
+          <div className="flex relative pt-10 pb-20 sm:items-center md:w-2/3 ">
+            <div className="h-full w-6 absolute inset-0 flex justify-center">
               <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
             <div className="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
@@ -45,7 +45,7 @@ function Steps() {
               </div>
             </div>
           </div>
-          <div className="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+          <div className="flex relative pb-20 sm:items-center md:w-2/3 ">
             <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
               <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
@@ -77,7 +77,7 @@ function Steps() {
               </div>
             </div>
           </div>
-          <div className="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+          <div className="flex relative pb-20 sm:items-center md:w-2/3 ">
             <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
               <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
@@ -110,7 +110,7 @@ function Steps() {
               </div>
             </div>
           </div>
-          <div className="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+          <div className="flex relative pb-10 sm:items-center md:w-2/3 ">
             <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
               <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
             </div>
