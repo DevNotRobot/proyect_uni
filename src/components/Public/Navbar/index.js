@@ -129,14 +129,14 @@ export default function Index() {
                     Acerca de Nosotros
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     to="contactus"
                     className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                   >
                     Contactanos
                   </Link>
-                </li>
+                </li> */}
               </ul>
               <div className="md:w-2/12 justify-end flex items-center space-x-4 xl:space-x-8">
                 <div className="flex lg:hidden">
@@ -268,14 +268,14 @@ export default function Index() {
                     Acerca Nosotros
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href="#!"
                     className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
                   >
                     Contactanos
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="h-full flex items-end">
