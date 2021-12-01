@@ -110,7 +110,7 @@ export default function Index() {
                     to="/"
                     className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                   >
-                    Home
+                    Inicio
                   </Link>
                 </li>
                 <li>
@@ -249,7 +249,7 @@ export default function Index() {
                     href="#!"
                     className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
                   >
-                    Home
+                    Inicio
                   </a>
                 </li>
                 <li>
